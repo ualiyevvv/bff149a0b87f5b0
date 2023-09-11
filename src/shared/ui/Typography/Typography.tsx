@@ -19,7 +19,8 @@ export const Typography: FC<TypographyProps> = (props) => {
         fontWeight: weight,
         color,
         marginBottom: bottom,
-        marginLeft: left
+        marginLeft: left,
+        'text-align': align
         // textAlign: align
     }
 

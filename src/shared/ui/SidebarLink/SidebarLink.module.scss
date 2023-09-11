@@ -6,7 +6,8 @@
   position: relative;
 }
 .SidebarLink__href {
-  width: 220px;
+  width: 100%;
+  min-width: 220px;
   text-decoration: none;
   color: var(--text-white, #F8F9FA);
   //font-family: Inter;

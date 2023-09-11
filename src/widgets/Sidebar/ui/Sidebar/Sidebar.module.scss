@@ -40,3 +40,18 @@
 .Sidebar__block--dnone {
     display: none;
 }
+@media (max-width:600px){
+    .Sidebar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 111;
+    }
+    .collapsed {
+        //display: none;
+        width: 0;
+        left: -100px;
+        //width: -100px;
+    }
+}

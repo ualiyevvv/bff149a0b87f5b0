@@ -7,8 +7,8 @@ export const DontHaveFriends = () => {
     return (
         <div>
             <Block width={'100%'} align={TypeAlignBlock.CENTER} top={100}>
-                <Typography size={32} color={'817C7C'} bottom={24} text={'You don’t have friends'}  />
-                <Typography size={20} color={'D2D1D1'} bottom={40} text={'Let’s try to find friends to build connections'}  />
+                <Typography align={'center'} size={32} color={'817C7C'} bottom={24} text={'You don’t have friends'}  />
+                <Typography align={'center'} size={20} color={'D2D1D1'} bottom={40} text={'Let’s try to find friends to build connections'}  />
                 <Button theme={ThemeButton.CLASSIC}>
                     Find friends
                 </Button>

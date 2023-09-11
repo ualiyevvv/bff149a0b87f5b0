@@ -1,4 +1,4 @@
-import { Suspense, useEffect } from 'react'
+import {Suspense, useEffect, useState} from 'react'
 import './styles/index.scss';
 import { useTheme } from 'app/providers/ThemeProvider';
 import { AppRouter } from 'app/providers/router';
@@ -14,12 +14,19 @@ const App = () => {
         console.log(__IS_DEV__)
     })
 
+    const [collapsed, setCollapsed] = useState(true)
+    const onToggle = () => {
+        console.log(collapsed)
+        setCollapsed(prev => !prev)
+        console.log(collapsed)
+    }
+
     return (
         <div className={classNames('app', {}, [theme])}>
             <Suspense fallback={<PageLoader />}>
                 <div className="content-page">
-                    <Sidebar />
-                    <AppRouter />
+                    <Sidebar isCollapsed={collapsed} onToggle={onToggle}/>
+                    <AppRouter onToggle={onToggle} />
                     <HotMessengerBar />
                 </div>
             </Suspense>

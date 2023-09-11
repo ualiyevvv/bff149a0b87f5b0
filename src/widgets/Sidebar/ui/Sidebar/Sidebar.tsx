@@ -19,22 +19,25 @@ import BurgerIcon from 'shared/assets/icons/burger-sidebar.svg'
 
 interface SidebarProps {
     className?: string;
+    isCollapsed?: boolean;
+    onToggle?: () => void;
 }
 
-export const Sidebar = ({ className }: SidebarProps) => {
+export const Sidebar = ({ className, isCollapsed, onToggle }: SidebarProps) => {
     const { t, i18n } = useTranslation()
-    const [collapsed, setCollapsed] = useState(false)
+    // const [collapsed, setCollapsed] = useState(isCollapsed)
 
-    const onToggle = () => {
-        setCollapsed(prev => !prev)
-    }
+    // const onToggle = () => {
+    //     setCollapsed(prev => !prev)
+    //     console.log(collapsed)
+    // }
 
     return (
         <div
-            className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}
+            className={classNames(cls.Sidebar, { [cls.collapsed]: isCollapsed }, [className])}
         >
             <GroupInline>
-                <div className={classNames(cls.Sidebar__block, { [cls['Sidebar__block--dnone']]: collapsed }, [className])}>
+                <div className={classNames(cls.Sidebar__block, { [cls['Sidebar__block--dnone']]: isCollapsed }, [className])}>
                     <Logo />
                 </div>
                 <Button theme={ThemeButton.ICONIC} onClick={onToggle}>
@@ -42,7 +45,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
                 </Button>
             </GroupInline>
 
-            <div className={classNames(cls.Sidebar__block, { [cls['Sidebar__block--collapsed']]: collapsed }, [className])}>
+            <div className={classNames(cls.Sidebar__block, { [cls['Sidebar__block--collapsed']]: isCollapsed }, [className])}>
                 <Block align={TypeAlignBlock.START} top={64}>
                     <Avatar size={120} bottom={16}/>
                     <Typography size={20} weight={600} bottom={2} text={'Omar Moldashev'}/>
@@ -50,12 +53,12 @@ export const Sidebar = ({ className }: SidebarProps) => {
                 </Block>
             </div>
             <div className={cls.links}>
-                <SidebarLink Icon={<MessagesIcon/>} extended={!collapsed} pushes={0} to={'/'} label={t('Главная')}/>
-                <SidebarLink Icon={<MessagesIcon/>} extended={!collapsed} pushes={12345234} to={'/messages'} label={t('Сообщения')}/>
-                <SidebarLink Icon={<FriendsIcon/>} extended={!collapsed} pushes={11} to={'/friends'} label={t('Друзья')}/>
-                <SidebarLink Icon={<RoomsIcon/>} extended={!collapsed} pushes={0} to={'/rooms'} label={t('Rooms')}/>
-                <SidebarLink Icon={<SettingsIcon/>} extended={!collapsed} pushes={0} to={'/settings'} label={t('Настройки')}/>
-                <SidebarLink Icon={<FaqIcon/>} extended={!collapsed} pushes={0} to={'/faq'} label={t('FAQ')}/>
+                <SidebarLink Icon={<MessagesIcon/>} extended={!isCollapsed} pushes={0} to={'/'} label={t('Главная')}/>
+                <SidebarLink Icon={<MessagesIcon/>} extended={!isCollapsed} pushes={12345234} to={'/messages'} label={t('Сообщения')}/>
+                <SidebarLink Icon={<FriendsIcon/>} extended={!isCollapsed} pushes={11} to={'/friends'} label={t('Друзья')}/>
+                <SidebarLink Icon={<RoomsIcon/>} extended={!isCollapsed} pushes={0} to={'/rooms'} label={t('Rooms')}/>
+                <SidebarLink Icon={<SettingsIcon/>} extended={!isCollapsed} pushes={0} to={'/settings'} label={t('Настройки')}/>
+                <SidebarLink Icon={<FaqIcon/>} extended={!isCollapsed} pushes={0} to={'/faq'} label={t('FAQ')}/>
             </div>
         </div>
     )

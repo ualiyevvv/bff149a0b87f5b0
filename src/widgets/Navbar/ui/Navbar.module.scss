@@ -18,3 +18,20 @@
 .mainLink {
     margin-right: 15px;
 }
+
+.navbar__burger {
+    display: none;
+}
+@media (max-width:600px){
+    .navbar {
+        padding: 22px 10px;
+    }
+    .navbar__burger {
+        display: block;
+        margin-right: 15px;
+
+    }
+    .navbar__burger svg rect {
+        fill: black;
+    }
+}
