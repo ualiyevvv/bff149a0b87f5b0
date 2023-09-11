@@ -1,0 +1,14 @@
+.HelloBoard {
+  padding: 40px 32px 56px 32px;
+  background-color: #fff;
+}
+.HelloBoard__title {
+  color: var(--brand-darkblue, #112042);
+  /* H1-Semibold-56-62 */
+  font-family: Montserrat;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 62px; /* 110.714% */
+
+}

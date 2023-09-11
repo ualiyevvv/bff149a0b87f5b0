@@ -1,0 +1,65 @@
+.ToggleSwitch {
+
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 56px;
+  height: 32px;
+}
+
+.switch .ToggleSwitch {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 32px;
+  width: 32px;
+  left: 0px;
+  bottom: 0px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.ToggleSwitch:checked + .slider {
+  background: var(--text-disabled, #E9E4E4)
+}
+.ToggleSwitch:checked + .slider:before {
+  background-color: var(--brand-accent, #8189F3);
+}
+
+.ToggleSwitch:focus + .slider {
+  box-shadow: 0px 4px 8px 0px rgba(129, 137, 243, 0.16) inset;
+}
+
+.ToggleSwitch:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 24px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

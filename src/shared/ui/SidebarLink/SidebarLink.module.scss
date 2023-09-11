@@ -1,0 +1,44 @@
+.SidebarLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 6px;
+  position: relative;
+}
+.SidebarLink__href {
+  width: 220px;
+  text-decoration: none;
+  color: var(--text-white, #F8F9FA);
+  //font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.SidebarLink:hover {
+  opacity: .7;
+}
+.SidebarLink__icon {
+  margin-right: 8px;
+}
+.SidebarLink__block {
+  display: flex;
+  align-items: center;
+}
+.SidebarLink__pushes {
+  position: absolute;
+  right: 0;
+  padding: 4px 8px;
+  background-color: #fff;
+  border-radius: 16px;
+  background: var(--brand-disable-blue, #CBCFFF);
+  //font-family: Inter;
+  font-size: 14px;
+  color: black;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}

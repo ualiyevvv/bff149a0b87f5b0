@@ -1,0 +1,80 @@
+.Input__wrapper {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.Input__wrapper--group {
+  margin-right: 10px;
+}
+.Input__wrapper--group:last-child {
+  margin-right: 0;
+}
+.Input__wrapper label, .select-form label {
+  padding-bottom: 9px;
+  color: var(--text-label, #817C7C);
+  /* font-family: Inter; */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+}
+.Input__wrapper {
+  //margin-bottom: 20px;
+}
+//.select-form {
+//  margin-bottom: 12px;
+//}
+//.Input__wrapper:last-child, .select-form:last-child {
+//  margin-bottom: 0;
+//}
+
+.Input {
+  width: 100%;
+  box-shadow: 2px 4px 4px rgba(30, 38, 47, 0.02);
+  //margin-bottom: 10px;
+  padding: 16px;
+  font-size: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--text-light, #D2D1D1);
+  outline-color: #8189F3;
+
+}
+.Input::placeholder { /* Most modern browsers support this now. */
+  color: rgba(53, 53, 53, 0.5);
+  font-weight: 500;
+}
+.Input__icon {
+  position: absolute;
+  top: 56%;
+  transform: translate(0, -50%);
+  right: 6px;
+  cursor: pointer;
+
+}
+.Input__icon svg {
+  transform: scale(.5);
+  fill: #282C2E;
+}
+
+.Input__subtext {
+  margin-top: 9px;
+  /* p3-Regular- 14-18 */
+  /* font-family: Inter; */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 128.571% */
+}
+.Input__subtext--error {
+  color: var(--iterations-error, #EB5A5A);
+}
+.Input--error {
+  border-color: #EB5A5A;
+}
+
+
+/* .input:last-child {
+    margin-bottom: 0;
+} */

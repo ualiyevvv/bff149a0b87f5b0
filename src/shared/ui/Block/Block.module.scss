@@ -1,0 +1,8 @@
+.Block {
+  display: flex;
+  flex-direction: column;
+}
+.Block--center {
+  align-items: center;
+  justify-content: center;
+}

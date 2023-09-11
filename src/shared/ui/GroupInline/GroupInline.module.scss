@@ -1,0 +1,11 @@
+.GroupInline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.GroupInline--start {
+  align-items: start;
+}
+.GroupInline--center {
+  align-items: center;
+}

@@ -1,0 +1,24 @@
+.GroupInput {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.GroupInput:last-child {
+  margin-bottom: 0;
+}
+.GroupInput input {
+  margin-right: 10px;
+}
+.GroupInput input:last-child {
+  margin-right: 0;
+}
+
+.GroupInput--ais {
+  align-items: start;
+}
+
+@media (max-width:640px){
+  .GroupInput--mobile {
+    flex-direction: column;
+  }
+}

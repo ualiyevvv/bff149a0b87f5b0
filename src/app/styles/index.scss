@@ -1,0 +1,51 @@
+@import "reset";
+@import "variables/global";
+@import "themes/normal";
+@import "themes/dark";
+
+.app {
+    font: var(--font-m);
+    background: var(--bg-color);
+    color: var(--primary-color);
+    min-height: 100vh;
+}
+
+.content-page {
+    display: flex;
+}
+:root {
+  --scrollbarBgColor: rgba(0, 0, 0, .05);
+  --scrollbarThumbColor: rgba(0, 0, 0, .15);
+  --scrollbarThumbColorSecond: rgba(255, 255, 255, .7);
+  --scrollbarWidth: 2rem;
+  --scrollbarBorder: 0 solid var(--scrollbarBgColor);
+  --scrollbarBorderRadius: calc(var(--scrollbarWidth) / 4);
+}
+.page::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 0 rgba(0,0,0,0.3);
+  border-radius: 0;
+  background-color: #F5F5F5;
+}
+
+.page::-webkit-scrollbar
+{
+  width: 8px;
+  background-color: #F5F5F5;
+}
+
+.page::-webkit-scrollbar-thumb
+{
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 6px var(--inverted-bg-color);
+  background-color: #555;
+}
+.page {
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+}
+.page-wrapper {
+    flex-grow: 1;
+    //padding: 20px;
+}

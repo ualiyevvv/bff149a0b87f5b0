@@ -1,0 +1,22 @@
+.HotMessengerBar {
+  display: flex;
+  flex-direction: column;
+  background: var(--text-white, #F8F9FA);
+  /* shadow/hover */
+  box-shadow: 0px 4px 16px 0px rgba(129, 137, 243, 0.25);
+  padding: 24px 16px 16px 16px;
+}
+.HotMessengerBar__block {
+  //padding: 24px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@media (max-width:640px){
+  .HotMessengerBar {
+    display: none;
+  }
+}
