@@ -10,9 +10,10 @@ interface TypographyProps {
     bottom?: number;
     left?: number;
     align?: string;
+    right?: number;
 }
 export const Typography: FC<TypographyProps> = (props) => {
-    const { text,size,weight,color,bottom ,align,left } = props;
+    const { text,size,weight,color,bottom ,align,left,right } = props;
 
     const style = {
         fontSize: size,
@@ -20,6 +21,7 @@ export const Typography: FC<TypographyProps> = (props) => {
         color,
         marginBottom: bottom,
         marginLeft: left,
+        marginRight: right,
         'text-align': align
         // textAlign: align
     }

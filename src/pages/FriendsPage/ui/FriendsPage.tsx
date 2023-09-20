@@ -13,6 +13,7 @@ import {Conversations} from "widgets/Chat/Conversations";
 import {Block} from "shared/ui/Block/Block";
 import {DataPresenter} from "widgets/DataPresenter/DataPresenter";
 
+
 const FriendsPage = () => {
     const { t } = useTranslation('about')
 
@@ -29,7 +30,7 @@ const FriendsPage = () => {
                 <Tab label={'New friends'} isActive={activeTab === 'New friends'} onClick={ () => setActiveTab('New friends')}/>
             </TabGroup>
 
-            <Block width={'100%'} top={40}>
+            <Block width={'100%'}>
 
                 {activeTab === 'My friends' &&
                     <DontHaveFriends />

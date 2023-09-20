@@ -1,15 +1,16 @@
-import {FC} from 'react'
-import {Card} from "shared/ui/Card/Card";
-import {Button, ThemeButton} from "shared/ui/Button/Button";
-import {Typography} from "shared/ui/Typography/Typography";
-import {Block, TypeAlignBlock} from "shared/ui/Block/Block";
-import {Avatar} from "shared/ui/Avatar/Avatar";
+import { FC } from 'react'
+import { Card } from 'shared/ui/Card/Card';
+import { Button, ThemeButton, WidthButton } from 'shared/ui/Button/Button';
+import { Typography } from 'shared/ui/Typography/Typography';
+import { Block, TypeAlignBlock } from 'shared/ui/Block/Block';
+import { Avatar } from 'shared/ui/Avatar/Avatar';
 
 import cls from './FriendCard.module.scss'
 
 import PlusIcon from 'shared/assets/icons/plusInCircle.svg'
-import {classNames} from "shared/lib/helpers/classNames";
-import {GroupInline} from "shared/ui/GroupInline/GroupInline";
+import { classNames } from 'shared/lib/helpers/classNames';
+import { GroupInline } from 'shared/ui/GroupInline/GroupInline';
+
 interface CardProps {
 }
 export const FriendCard: FC<CardProps> = (props) => {
@@ -32,7 +33,7 @@ export const FriendCard: FC<CardProps> = (props) => {
                             <Typography size={12} weight={400} bottom={0} text={'3 common friends'} />
                         </GroupInline>
                     </Block>
-                    <Button theme={ThemeButton.CLASSIC}>
+                    <Button theme={ThemeButton.CLASSIC} width={WidthButton.FULL}>
                         <PlusIcon />
                         <Typography left={10} size={20} weight={400} text={'Add friend'} />
                     </Button>
